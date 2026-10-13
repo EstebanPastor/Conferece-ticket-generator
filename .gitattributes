@@ -1,2 +1,1 @@
-src/**/*.tsx linguist-detectable=true
-src/**/*.jsx linguist-detectable=true
+*.css linguist-vendored
