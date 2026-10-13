@@ -1,7 +1,13 @@
+import TicketFormPage from "./components/ticket-form-page/TicketFormPage";
+import MainLayout from "./components/layouts/MainLayout";
+
+
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <MainLayout>
+      <TicketFormPage />
+    </MainLayout>
+  );
+};
 
-export default App
+export default App;
