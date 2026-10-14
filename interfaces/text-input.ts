@@ -3,4 +3,6 @@ export interface TextInputProps {
   placeholder: string;
   type?: 'text' | 'email'
   label: string;
+  isError?: boolean;
+  errorMessage?: string;
 }
