@@ -3,7 +3,7 @@ import Hero from "./Hero";
 
 const TicketFormPage = () => {
   return (
-    <section className="w-93.75 mx-auto pb-20">
+    <section className="mx-auto pb-19">
       <Hero />
       <Form />
     </section>
