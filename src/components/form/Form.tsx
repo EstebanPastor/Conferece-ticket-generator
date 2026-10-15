@@ -2,6 +2,7 @@ import UploadInput from "./UploadInput";
 import TextInput from "./TextInput";
 import SubmitFormButton from "../ticket-form-page/SubmitFormButton";
 import { useForm, type SubmitHandler } from "react-hook-form";
+import { useUserStore } from "../../store/user";
 
 type Inputs = {
   fullName: string;
@@ -19,10 +20,16 @@ const Form = () => {
   } = useForm<Inputs>();
 
   const context = useShowTicket();
+  const userStore = useUserStore();
 
   const sendForm: SubmitHandler<Inputs> = (data: Inputs) => {
-    console.log(data);
+    const { email, fullName, githubUsername } = data;
     context.setShowTicket(true);
+    userStore.setUser({
+      email: email,
+      fullName: fullName,
+      githubUser: githubUsername,
+    });
   };
 
   return (
