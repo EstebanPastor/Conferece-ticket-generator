@@ -1,14 +1,14 @@
 import TicketFormPage from "./components/ticket-form-page/TicketFormPage";
 import MainLayout from "./components/layouts/MainLayout";
 import ConfirmationPage from "./components/confirmation-page/ConfirmationPage";
-import { useState } from "react";
+import { useShowTicket } from "./hooks/useShowTicket";
 
 const App = () => {
-  const [isShow, setIsShow] = useState(false);
+  const context = useShowTicket();
 
   return (
     <MainLayout>
-      {isShow ? <ConfirmationPage /> : <TicketFormPage setIsShow={setIsShow} />}
+      {context.showTicket ? <ConfirmationPage /> : <TicketFormPage />}
     </MainLayout>
   );
 };

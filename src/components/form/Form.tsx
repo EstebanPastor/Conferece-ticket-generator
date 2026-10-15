@@ -9,6 +9,8 @@ type Inputs = {
   githubUsername: string;
 };
 
+import { useShowTicket } from "../../hooks/useShowTicket";
+
 const Form = () => {
   const {
     register,
@@ -16,9 +18,11 @@ const Form = () => {
     handleSubmit,
   } = useForm<Inputs>();
 
+  const context = useShowTicket();
+
   const sendForm: SubmitHandler<Inputs> = (data: Inputs) => {
     console.log(data);
-   
+    context.setShowTicket(true);
   };
 
   return (

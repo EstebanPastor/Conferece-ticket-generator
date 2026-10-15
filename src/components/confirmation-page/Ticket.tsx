@@ -13,10 +13,11 @@ const Ticket = () => {
         />
         <div>
           <p className="text-xl font-medium">Esteban Pastor</p>
-          <p className="flex">
+          {/* ✅ Cambiado a <div> */}
+          <div className="flex">
             <img src="/assets/images/icon-github.svg" alt="Github icon" />
             <p>@estebanpastor</p>
-          </p>
+          </div>
         </div>
       </div>
       <p className="text-2xl absolute top-1/2 right-0 transform -translate-y-1/2 rotate-90 text-neutral-500">#102131</p>
