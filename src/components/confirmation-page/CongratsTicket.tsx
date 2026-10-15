@@ -15,9 +15,11 @@ const CongratsTicket = () => {
         <span className="bg-linear-to-r from-orange-500 to bg-neutral-0 bg-clip-text text-transparent">
           {name}
         </span>
+        {" "}
         <span className="bg-linear-to-r from-orange-500 to bg-neutral-0 bg-clip-text text-transparent">
           {lastname}
-        </span>{" "}
+        </span>
+        {" "}
         Your ticket is ready.
       </p>
       <p className="text-[19px] text-center mb-20 text-neutral-300">
